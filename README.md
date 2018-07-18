@@ -27,4 +27,7 @@ const error = new Error('foo');
 log.debug({error}, 'bar');
 childLog.debug({error}, 'bar');
 
+// {"context":{"logLevel":20,"error":{}},"message":"bar","sequence":0,"time":1531918373676,"version":"1.0.0"}
+// {"context":{"logLevel":20,"error":{"name":"Error","message":"foo","stack":"[REDACTED]"}},"message":"bar","sequence":1,"time":1531918373678,"version":"1.0.0"}
+
 ```
