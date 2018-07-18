@@ -1,0 +1,76 @@
+{
+  "author": {
+    "email": "gajus@gajus.com",
+    "name": "Gajus Kuizinas",
+    "url": "http://gajus.com"
+  },
+  "ava": {
+    "require": [
+      "@babel/register"
+    ]
+  },
+  "dependencies": {
+    "roarr": "^2.5.0",
+    "serialize-error": "^2.1.0"
+  },
+  "description": "Serializes error objects in the Roarr message context.",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/node": "^7.0.0-beta.54",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/register": "^7.0.0-beta.54",
+    "ava": "^1.0.0-beta.6",
+    "babel-plugin-istanbul": "^5.0.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.1.0",
+    "eslint-config-canonical": "^11.0.0",
+    "flow-bin": "^0.76.0",
+    "flow-copy-source": "^2.0.1",
+    "husky": "^1.0.0-rc.13",
+    "nyc": "^13.0.0",
+    "semantic-release": "^15.8.0"
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test && npm run build"
+    }
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "json",
+    "roarr",
+    "middleware"
+  ],
+  "main": "./dist/createSerializeErrorMiddleware.js",
+  "name": "@roarr/middleware-serialize-error",
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "instrument": false,
+    "reporter": [
+      "text-lcov"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gajus/roarr-middleware-serialize-error.git"
+  },
+  "scripts": {
+    "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && flow-copy-source src dist",
+    "dev": "NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps --watch",
+    "lint": "eslint ./src ./test && flow",
+    "test": "NODE_ENV=test ava --serial --verbose"
+  },
+  "version": "1.0.0"
+}
