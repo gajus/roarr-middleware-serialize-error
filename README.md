@@ -1,7 +1,7 @@
 # @roarr/middleware-serialize-error
 
 [![Travis build status](http://img.shields.io/travis/gajus/roarr-middleware-serialize-error/master.svg?style=flat-square)](https://travis-ci.org/gajus/roarr-middleware-serialize-error)
-[![Coveralls](https://img.shields.io/coveralls/gajus/roarr.svg?style=flat-square)](https://coveralls.io/github/gajus/roarr-middleware-serialize-error)
+[![Coveralls](https://img.shields.io/coveralls/gajus/roarr-middleware-serialize-error.svg?style=flat-square)](https://coveralls.io/github/gajus/roarr-middleware-serialize-error)
 [![NPM version](http://img.shields.io/npm/v/@roarr/middleware-serialize-error.svg?style=flat-square)](https://www.npmjs.com/package/@roarr/middleware-serialize-error)
 [![Canonical Code Style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)
 [![Twitter Follow](https://img.shields.io/twitter/follow/kuizinas.svg?style=social&label=Follow)](https://twitter.com/kuizinas)
