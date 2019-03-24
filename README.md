@@ -20,7 +20,9 @@ Raise an issue if you have a use case that requires deep property mapping.
 import log from 'roarr';
 import createSerializeErrorMiddleware from '@roarr/middleware-serialize-error';
 
-const childLog = log.child(createSerializeErrorMiddleware());
+const childLog = log
+  .child({name: 'foo'})
+  .child(createSerializeErrorMiddleware());
 
 const error = new Error('foo');
 
